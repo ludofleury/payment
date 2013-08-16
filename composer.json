@@ -1,0 +1,37 @@
+{
+    "name": "playbloom/payment",
+    "type": "library",
+    "description": "Payment library for card transactions",
+    "keywords": ["payment", "card", "php"],
+    "time": "2013-08-12",
+    "homepage": "https://github.com/ludofleury/payment",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ludovic Fleury",
+            "email": "ludo.fleury@gmail.com",
+            "homepage": "https://github.com/ludofleury"
+        }
+    ],
+    "support": {
+        "email": "ludo.fleury@gmail.com",
+        "issues": "https://github.com/ludofleury/payment/issues",
+        "source": "https://github.com/ludofleury/payment"
+    },
+    "autoload": {
+        "psr-0": { "Playbloom": "src/" }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4",
+        "mathiasverraes/money": "dev-master"
+    },
+    "require-dev": {
+        "mageekguy/atoum": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}

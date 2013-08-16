@@ -1,0 +1,17 @@
+language: php
+php:
+- 5.4
+- 5.5
+notifications:
+  email:
+  - ludo.fleury@gmail.com
+  webhooks:
+  - https://www.buildheroes.com/api/projects/49eecf6392c70a79622fb89f8daec1b026746b7b/builds
+env:
+  global:
+    - secure: LXPxe/scdYDJBNQTAcCe6yTGaKcgOqBIl00i8u0kqzhYNHZVUwFNQPbM4rBON8OeBzhbXMYVV7RN5l+IEUb02TtpgV9BYVJLHp21H5niqs2id0yFdUmYbK9jYNB1qQ48Yw3G4NcVQWG2IBaSjYcK0ZM48bRQIwD37cxJd+t9gVM=
+before_script:
+  - wget -nc -nv http://getcomposer.org/composer.phar
+  - php composer.phar install --dev --prefer-source --no-progress
+  - php composer.phar dump-autoload --optimize
+script: php vendor/bin/atoum -c .atoum.php.ci -d tests
